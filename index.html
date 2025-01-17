@@ -8,6 +8,39 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="signUpMenu">
+        <div class="slide"></div>
+        <form action="" method="post">
+            <p>Create your account</p>
+            <label for="emailInput">Email</label>
+            <input type="email" name="email" id="emailInput" pattern="*" autofocus placeholder="email@domain.com" required>
+            <label for="passwordInput">Password</label>
+            <input type="password" name="password" id="passwordInput" pattern="*" minlength="5" maxlength="50" autocomplete="new-password" required>
+            <p>Date of birth</p>
+            <label for="monthInput">Month</label>
+            <select name="month" id="monthInput" required>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+            <label for="dayInput">Day</label>
+            <input type="tel" name="day" id="dayInput" pattern="*" required min="1" max="31" minlength="1" maxlength="2" autocomplete="bday-day">
+            <label for="yearInput">Year</label>
+            <input type="tel" name="year" id="yearInput" pattern="*" required min="1900" max="2999" minlength="4" maxlength="4" autocomplete="bday-year">
+            <input type="checkbox" id="termsAndConditionsInput" checked required>
+            <label for="termsAndConditionsInput">By signing up, you agree to our <a href="#">Terms and Conditions</a></label>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#">Login</a></p>
+    </div>
 </body>
 </html>
