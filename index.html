@@ -19,9 +19,8 @@
             <label>Password <br>
                 <input type="password" name="password" id="passwordInput" pattern="*" minlength="5" maxlength="50" autocomplete="new-password" required>
             </label>
-            <h3 class="dateOfBirthLabel">Date of birth</h3>
-            <span class="dateOfBirth">
-                <label>Month <br>
+            <label id="dateOfBirthLabel">Date of birth
+                <span class="dateOfBirth">
                     <select name="month" id="monthInput" required>
                         <option value="january">January</option>
                         <option value="february">February</option>
@@ -36,14 +35,10 @@
                         <option value="november">November</option>
                         <option value="december">December</option>
                     </select>
-                </label>
-                <label>Day <br>
-                    <input type="tel" name="day" id="dayInput" pattern="*" required min="1" max="31" minlength="1" maxlength="2" autocomplete="bday-day">
-                </label>
-                <label>Year <br>
-                    <input type="tel" name="year" id="yearInput" pattern="*" required min="1900" max="2999" minlength="4" maxlength="4" autocomplete="bday-year">
-                </label>
-            </span>
+                    <input type="tel" name="day" id="dayInput" aria-label="Day"  placeholder="Day" pattern="*" required min="1" max="31" minlength="1" maxlength="2" autocomplete="bday-day">
+                    <input type="tel" name="year" id="yearInput" aria-label="Year" placeholder="Year" pattern="*" required min="1900" max="2999" minlength="4" maxlength="4" autocomplete="bday-year">
+                </span>
+            </label>
             <span class="terms">
                 <input type="checkbox" id="termsInput" checked required>
                 <label  id="termsLabel" for="termsInput"><p>By signing up, you agree to our <a href="#">Terms and Conditions</a></p></label>
