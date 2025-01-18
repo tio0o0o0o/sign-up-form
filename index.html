@@ -11,41 +11,45 @@
     <div class="signUpMenu">
         <div class="slide"></div>
         <form action="" method="post">
-            <p>Create your account</p>
-            <label>Email
+            <h3>Create your account</h3>
+            <label>Email <br>
                 <input type="email" name="email" id="emailInput" pattern="*" autofocus placeholder="email@domain.com" required>
             </label>
-            <label>Password
+            <label>Password <br>
                 <input type="password" name="password" id="passwordInput" pattern="*" minlength="5" maxlength="50" autocomplete="new-password" required>
             </label>
-            <p>Date of birth</p>
-            <label>Month
-                <select name="month" id="monthInput" required>
-                    <option value="january">January</option>
-                    <option value="february">February</option>
-                    <option value="march">March</option>
-                    <option value="april">April</option>
-                    <option value="may">May</option>
-                    <option value="june">June</option>
-                    <option value="july">July</option>
-                    <option value="august">August</option>
-                    <option value="september">September</option>
-                    <option value="october">October</option>
-                    <option value="november">November</option>
-                    <option value="december">December</option>
-                </select>
-            </label>
-            <label>Day
-                <input type="tel" name="day" id="dayInput" pattern="*" required min="1" max="31" minlength="1" maxlength="2" autocomplete="bday-day">
-            </label>
-            <label>Year
-                <input type="tel" name="year" id="yearInput" pattern="*" required min="1900" max="2999" minlength="4" maxlength="4" autocomplete="bday-year">
-            </label>
-            <input type="checkbox" id="termsAndConditionsInput" checked required>
-            <label for="termsAndConditionsInput">By signing up, you agree to our <a href="#">Terms and Conditions</a></label>
+            <h4 class="dateOfBirthLabel">Date of birth</h4>
+            <span class="dateOfBirth">
+                <label>Month <br>
+                    <select name="month" id="monthInput" required>
+                        <option value="january">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                </label>
+                <label>Day <br>
+                    <input type="tel" name="day" id="dayInput" pattern="*" required min="1" max="31" minlength="1" maxlength="2" autocomplete="bday-day">
+                </label>
+                <label>Year <br>
+                    <input type="tel" name="year" id="yearInput" pattern="*" required min="1900" max="2999" minlength="4" maxlength="4" autocomplete="bday-year">
+                </label>
+            </span>
+            <span class="terms">
+                <input type="checkbox" id="termsInput" checked required>
+                <label for="termsInput">By signing up, you agree to our <a href="#">Terms and Conditions</a></label>
+            </span>
             <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="#">Login</a></p>
         </form>
-        <p>Already have an account? <a href="#">Login</a></p>
     </div>
 </body>
 </html>
