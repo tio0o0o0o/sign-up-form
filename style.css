@@ -20,6 +20,13 @@ button:enabled, select {
     --grey: rgb(177, 177, 177);
     --pink: rgb(255, 56, 89);
     --darkPink: rgb(219, 49, 77);
+    --pinkShadow: rgb(from var(--pink) r g b / 0.8); 
+   
+}
+
+@font-face {
+    font-family: "playwrite";
+    src: url(assets/fonts/playwrite.ttf);
 }
 
 body {
@@ -56,14 +63,25 @@ body {
 }
 
 .slide {
-    background-image: url(assets/images/ana.jpg);
-    background-position: center -110px;
-    background-origin: 350px;
-    background-size: 750px auto;
+    background-image: url(assets/images/ana.webp);
+    background-position: center -140px;
+    background-size: 700px auto;
     background-repeat: no-repeat;
     width: 50%;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
+    position: relative;
+}
+
+.slide > h1 {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 60px;
+    rotate: -6deg;
+    color: var(--pink);
+    font-family: "playwrite", Arial, Helvetica, sans-serif, system-ui;
+    text-shadow: 0 0 6px var(--pinkShadow);
 }
 
 form {
@@ -158,7 +176,6 @@ form {
     }
 
     & button {
-        /* margin-top: 30px; */
         margin-top: 60px;
         background-color: var(--pink);
         border-radius: 10px;
