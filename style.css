@@ -37,10 +37,7 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: -1px 1px 8px 2px rgba(0, 0, 0, 0.397);
-    background-image: url(assets/images/ana.jpg);
-    background-position: -80px -110px;
-    background-size: 65% auto;
-    background-repeat: no-repeat;
+    background-color: var(--black);
 }
 
 .exit {
@@ -59,18 +56,20 @@ body {
 }
 
 .slide {
-    /* background-image: url(assets/images/bg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
+    background-image: url(assets/images/ana.jpg);
+    background-position: center -110px;
+    background-origin: 350px;
+    background-size: 750px auto;
+    background-repeat: no-repeat;
     width: 50%;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 form {
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
     width: 50%;
-    background-color: var(--black);
     color: white;
     padding: 0 4%;
     gap: 20px;
