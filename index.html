@@ -9,16 +9,17 @@
 </head>
 <body>
     <div class="signUpMenu">
+        <button class="exit"><img src="assets/images/cross.svg" alt="cross"></button>
         <div class="slide"></div>
         <form action="" method="post">
-            <h3>Create your account</h3>
+            <h1>Create your account</h1>
             <label>Email <br>
                 <input type="email" name="email" id="emailInput" pattern="*" autofocus placeholder="email@domain.com" required>
             </label>
             <label>Password <br>
                 <input type="password" name="password" id="passwordInput" pattern="*" minlength="5" maxlength="50" autocomplete="new-password" required>
             </label>
-            <h4 class="dateOfBirthLabel">Date of birth</h4>
+            <h3 class="dateOfBirthLabel">Date of birth</h3>
             <span class="dateOfBirth">
                 <label>Month <br>
                     <select name="month" id="monthInput" required>
@@ -45,10 +46,10 @@
             </span>
             <span class="terms">
                 <input type="checkbox" id="termsInput" checked required>
-                <label for="termsInput">By signing up, you agree to our <a href="#">Terms and Conditions</a></label>
+                <label  id="termsLabel" for="termsInput"><p>By signing up, you agree to our <a href="#">Terms and Conditions</a></p></label>
             </span>
             <button type="submit">Sign Up</button>
-            <p>Already have an account? <a href="#">Login</a></p>
+            <p id="loginText">Already have an account? <a href="#" class="loginLink">Login</a></p>
         </form>
     </div>
 </body>

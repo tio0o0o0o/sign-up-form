@@ -1,8 +1,25 @@
+/* CSS RESET */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif, system-ui;
+    text-decoration: none;
+    appearance: none;
+    outline: none;
+}
+
+button:enabled, select {
+    cursor: pointer;
+}
+
+/* CSS RESET END */
+
+:root {
+    --black: rgb(48, 48, 48);
+    --grey: rgb(177, 177, 177);
+    --pink: rgb(255, 56, 89);
+    --darkPink: rgb(219, 49, 77);
 }
 
 body {
@@ -16,20 +33,53 @@ body {
     width: min(1200px, 90%);
     height: 800px;
     display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.exit {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .slide {
-    background-color: black;
+    background-image: url(assets/images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 50%;
 }
 
 form {
     width: 50%;
-    background-color: rgb(236, 236, 236);
+    background-color: var(--black);
+    color: white;
     padding: 6% 4%;
     gap: 20px;
     display: flex;
     flex-direction: column;
+
+    & label:not([for="termsInput"]) {
+        font-weight: bold;
+        color: var(--grey);
+    }
+
+    select {
+        background-image: url(assets/images/down-arrow-grey.svg);
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+    }
 
     & input:not([type="checkbox"]), & select, & button {
         width: 100%;
@@ -37,11 +87,23 @@ form {
     }
 
     & input:not([type="checkbox"]), & select {
-        margin-top: 5px;
+        margin-top: 6px;
+        background-color: transparent; 
+        border: 1px solid var(--grey);
+        border-radius: 10px;
+        color: white;
+        padding: 0 10px;
+        font-size: 18px;
+    }
+
+    & option {
+        color: var(--black);
     }
 
     .dateOfBirthLabel {
-        margin-top: 30px;
+        /* margin-top: 30px; */
+        margin-top: 15px;
+        color: var(--grey);
     }
 
     .dateOfBirth {
@@ -53,12 +115,69 @@ form {
         width: calc(100% / 3);
     }
 
-    .terms {
+    #termsInput {
+        /* Hide the default checkbox. Turns opacity to 0 instead of doing display: none to support screen readers */
+        cursor: default;
+        opacity: 0;
+        position: absolute;
+    }
+
+    #termsLabel {
         display: flex;
-        gap: 10px;
+        align-items: center;
+        user-select: none;
+    }
+
+    #termsLabel a {
+        color: white;
+        font-weight: bold;
+    }
+
+    #termsLabel::before {
+        content: "";
+        border: 2px solid white;
+        border-radius: 4px;
+        height: 22px;
+        width: 22px;
+        margin-right: 10px;
+        transition-duration: 100ms;
+        transition-property: background-color, border-color;
+        cursor: pointer;
+    }
+
+    #termsInput:checked + #termsLabel::before {
+        content: "✔";
+        font-size: 20px;
+        border-color: var(--pink);
+        background-color: var(--pink);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     & button {
-        margin-top: 30px;
+        /* margin-top: 30px; */
+        margin-top: 60px;
+        background-color: var(--pink);
+        border-radius: 10px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition-duration: 100ms;
+        transition-property: background-color;
+    }
+
+    & button:hover {
+        background-color: var(--darkPink);
+    }
+
+    #loginText {
+        text-align: center;
+    }
+
+    .loginLink {
+        color: var(--pink);
+        font-weight: bold;
     }
 }
