@@ -152,6 +152,7 @@ form {
         background-size: auto;
         left: calc(100% - 39px);
         top: -5px;
+        cursor: pointer;
     }
 
     #showPasswordToggle:checked {
