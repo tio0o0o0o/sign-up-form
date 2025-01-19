@@ -216,10 +216,8 @@ passwordInput.addEventListener("focusout", () => {
 function toggleVisibility() {
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        console.log("Set to text");
     }
     else {
         passwordInput.type = "password";
-        console.log("Set to password");
     }
 }
