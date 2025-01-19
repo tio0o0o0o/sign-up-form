@@ -16,7 +16,7 @@ button:enabled, select {
 /* CSS RESET END */
 
 :root {
-    --black: rgb(48, 48, 48);
+    --black: rgb(37, 37, 37);
     --darkBlack: rgb(26, 26, 26);
     --grey: rgb(177, 177, 177);
     --pink: rgb(255, 56, 122);
