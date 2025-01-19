@@ -91,10 +91,9 @@ form {
     border-bottom-left-radius: 16px;
     width: 50%;
     color: white;
-    padding: 0 4%;
+    padding: 80px 4% 0 4%;
     gap: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
 
     & label:not([for="termsInput"]) {
@@ -105,7 +104,7 @@ form {
     select {
         background-image: url(assets/images/down-arrow-grey.svg);
         background-repeat: no-repeat;
-        background-position: 95% 50%;
+        background-position: calc(100% - 10px) 50%;
     }
 
     input:not([type="checkbox"]), select {
@@ -133,6 +132,27 @@ form {
         color: white;
         padding: 0 10px;
         font-size: 18px;
+    }
+
+    .passwordWrapper {
+        position: relative;
+        height: 50px;
+    }
+
+    #showPasswordToggle {
+        position: absolute;
+        width: 27px;
+        height: 27px;
+        background-image: url(assets/images/not-visible.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        left: calc(100% - 39px);
+        top: -5px;
+    }
+
+    #showPasswordToggle:checked {
+        background-image: url(assets/images/visible.svg);
     }
 
     & option {

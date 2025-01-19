@@ -20,7 +20,10 @@
                 <p class="errorMessage" id="emailError">⚠ Please enter a valid email address</p>
             </label>
             <label>Password <br>
-                <input type="password" name="password" id="passwordInput" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*\(\)])[a-zA-Z0-9!@#$%^&*\(\)]{8,}$" minlength="8" maxlength="50" autocomplete="new-password" required>
+                <span class="passwordWrapper">
+                    <input type="password" name="password" id="passwordInput" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*\(\)])[a-zA-Z0-9!@#$%^&*\(\)]{8,}$" minlength="8" maxlength="50" autocomplete="new-password" required>
+                    <input type="checkbox" id="showPasswordToggle" onclick="toggleVisibility()">
+                </span>
                 <p class="errorMessage" id="passwordError1">⚠ Must contain 8 or more characters</p>
                 <p class="errorMessage" id="passwordError2">⚠ Must include uppercase, lowercase, number, and special character: !@#$%^&*()</p>
                 <p class="errorMessage" id="passwordError3">⚠ Password contains forbidden characters. Allowed characters are: a-z, A-Z, 0-9, !@#$%^&*()</p>
