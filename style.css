@@ -23,7 +23,6 @@ button:enabled, select {
     --darkPink: rgb(221, 48, 106);
     --desaturatedPink: rgb(201, 72, 115);
     --pinkShadow: rgb(from var(--pink) r g b / 0.8); 
-   
 }
 
 @font-face {
@@ -36,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--darkBlack);
+    background-image: url(assets/images/blurred-background.jpg);
 }
 
 .signUpMenu {
@@ -217,5 +216,12 @@ form {
     .loginLink {
         color: var(--pink);
         font-weight: bold;
+    }
+
+    .errorMessage {
+        font-weight: normal;
+        color: red;
+        margin-top: 6px;
+        display: none;
     }
 }

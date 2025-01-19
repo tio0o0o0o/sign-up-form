@@ -16,10 +16,14 @@
         <form action="" method="post">
             <h1>Create your account</h1>
             <label>Email <br>
-                <input type="email" name="email" id="emailInput" pattern="^[a-zA-Z0-9]+([\.\-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([\-][a-zA-Z0-9]+)?(\.[a-zA-Z0-9]{2,})+$" autofocus placeholder="ben.dover@rubhub.com" required>
+                <input type="email" name="email" id="emailInput" pattern="^[a-zA-Z0-9]+([\.\-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([\-][a-zA-Z0-9]+)?(\.[a-zA-Z0-9]{2,})+$" autofocus placeholder="ben.dover@rubhub.com" autocomplete="email" required>
+                <p class="errorMessage" id="emailError">⚠ Please enter a valid email address</p>
             </label>
             <label>Password <br>
                 <input type="password" name="password" id="passwordInput" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*\(\)])[a-zA-Z0-9!@#$%^&*\(\)]{8,}$" minlength="8" maxlength="50" autocomplete="new-password" required>
+                <p class="errorMessage" id="passwordError1">⚠ Must contain 8 or more characters</p>
+                <p class="errorMessage" id="passwordError2">⚠ Must include uppercase, lowercase, number, and special character: !@#$%^&*()</p>
+                <p class="errorMessage" id="passwordError3">⚠ Password contains forbidden characters. Allowed characters are: a-z, A-Z, 0-9, !@#$%^&*()</p>
             </label>
             <label id="dateOfBirthLabel">Date of birth
                 <span class="dateOfBirth">
@@ -40,6 +44,7 @@
                     <input type="tel" name="day" id="dayInput" aria-label="Day"  placeholder="Day" pattern="^(0?[1-9]|[1-2][0-9]|3[0-1])$" required min="1" max="31" minlength="1" maxlength="2" autocomplete="bday-day">
                     <input type="tel" name="year" id="yearInput" aria-label="Year" placeholder="Year" pattern="^(19[0-9][0-9]|20[0-1][0-9]|202[0-5])$" required min="1900" max="2025" minlength="4" maxlength="4" autocomplete="bday-year">
                 </span>
+                <p class="errorMessage" id="dateError">⚠ Please enter a valid date</p>
             </label>
             <span class="terms">
                 <input type="checkbox" id="termsInput" checked required>

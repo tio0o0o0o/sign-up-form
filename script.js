@@ -1,10 +1,18 @@
 const form = document.querySelector("form");
+
 const emailInput = document.querySelector("#emailInput");
 const passwordInput = document.querySelector("#passwordInput");
 const dayInput = document.querySelector("#dayInput");
 const yearInput = document.querySelector("#yearInput");
 const termsCheckbox = document.querySelector("#termsInput");
+
 const submitButton = document.querySelector("#submitButton");
+
+const emailError = document.querySelector("#emailError");
+const passwordError1 = document.querySelector("#passwordError1");
+const passwordError2 = document.querySelector("#passwordError2");
+const passwordError3 = document.querySelector("#passwordError3");
+const dateError = document.querySelector("#dateError");
 
 const emailRegex = /^[a-zA-Z0-9]+([\.\-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([\-][a-zA-Z0-9]+)?(\.[a-zA-Z0-9]{2,})+$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*\(\)])[a-zA-Z0-9!@#$%^&*\(\)]{8,}$/;
@@ -26,13 +34,16 @@ function inputIsValid(inputControl, regex) {
 }
 
 form.addEventListener("input", () => {
-    console.log("Inputted")
-    if (allInputIsValid()) {
-        console.log("Valid")
-        submitButton.disabled = false;
+    if (allInputIsValid()) submitButton.disabled = false;
+    else submitButton.disabled = true;
+
+    if (getComputedStyle(emailInput, ":user-invalid") !== null) {
+        console.log(getComputedStyle(emailInput, ":user-invalid"));
     }
-    else {
-        console.log("Invalid")
-        submitButton.disabled = true;
-    }
+    else console.log("emailInput:user-invalid style is null");
 });
+
+form.addEventListener("focusout", () => {
+
+})
+
