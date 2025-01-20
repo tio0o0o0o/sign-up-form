@@ -150,7 +150,7 @@ form {
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto;
-        left: calc(100% - 39px);
+        left: calc(100% - 47px);
         top: -5px;
         cursor: pointer;
     }
